@@ -1426,7 +1426,7 @@ footer {
     .artist-grid {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: column;
         gap: 12px;
     }
 
