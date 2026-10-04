@@ -23,12 +23,12 @@
         <div class="logo"><a href="/">CHOPVIBE MUSIC</a></div>
         <nav class="nav-links" id="navLinks">
             <ul>
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/artist">Artists</a></li>
-                <li><a href="/service">Services</a></li>
-                <li><a href="/videos">Videos</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/"class="<%= currentPath === '/' ? 'active' : '' %>">Home</a></li>
+                <li><a href="/about" class="<%= currentPath === '/about' ? 'active' : '' %>">About Us</a></li>
+                <li><a href="/artist" class="<%= currentPath === '/artist' ? 'active' : '' %>">Artists</a></li>
+                <li><a href="/service" class="<%= currentPath === '/services' ? 'active' : '' %>">Services</a></li>
+                <li><a href="/videos" class="<%= currentPath === '/services' ? 'active' : '' %>">Videos</a></li>
+                <li><a href="/contact" class="<%= currentPath === '/contact' ? 'active' : '' %>">Contact</a></li>
             </ul>
         </nav>
 			<div class="header-tools">
