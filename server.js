@@ -13,8 +13,19 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.get('/', (req, res) => {
-    res.render('index', { page_name: 'index' });
+app.get('/', async (req, res) => {
+  try {
+    res.render('index', { 
+      page_name: 'index',
+      headerClass: '',
+      
+      user: req.session?.user || null 
+    });
+  } catch (err) {
+    console.error('🔥 Error rendering homepage template:', err.message);
+    // Fallback redirect to discover if the homepage view file errors out
+    res.redirect('/about');
+  }
 });
 
 app.get('/about', (req, res) => {
