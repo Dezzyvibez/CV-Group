@@ -27,7 +27,7 @@ header {
     justify-content: space-between;
     align-items: center;
 	align-content: center;
-    padding: 5px 5%;
+    padding: 15px 5%;
     position:fixed;
 	top: 0;
     width: 100%;
@@ -48,7 +48,7 @@ header.scrolled {
 
 header .logo {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: -1px;
 	font-family: ;
 	text-transform: ;
