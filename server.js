@@ -1,9 +1,23 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+console.log('PROJECT ROOT:', __dirname);
+console.log('VIEWS PATH:', path.join(__dirname, 'views'));
+console.log(
+    'INDEX.EJS EXISTS:',
+    fs.existsSync(path.join(__dirname, 'views', 'index.ejs'))
+);
+console.log(
+    'VIEWS CONTENTS:',
+    fs.existsSync(path.join(__dirname, 'views'))
+        ? fs.readdirSync(path.join(__dirname, 'views'))
+        : 'VIEWS FOLDER NOT FOUND'
+);
+
 
 // Tell Express exactly where the EJS templates are
 app.set('views', path.join(__dirname, 'views'));
