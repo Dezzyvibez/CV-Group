@@ -83,7 +83,7 @@ header .logo a{
 .nav-links ul li a {
     color: #fff;
     margin-left: 0;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
 	font-weight: 500;
 	font-family:;
 	letter-spacing: 1px;
@@ -98,6 +98,7 @@ header .logo a{
 }
 .nav-links ul li a.active{
 	color: var(--hunter) !important;
+	font-size: 0.7rem;
 }
 
 .nav-links ul li a.scrolled {
