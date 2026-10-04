@@ -1126,9 +1126,9 @@ footer {
 		display: block;
         position: fixed;
         top: 0;
-        left: -100%;
+        right: -100%;
         width: 80%;
-        max-width: 350px;
+        max-width: 300px;
         height: 100vh;
         align-items: center;
         gap: 25px;
