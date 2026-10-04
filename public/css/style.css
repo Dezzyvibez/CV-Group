@@ -346,7 +346,7 @@ header .logo a{
 	}
 	
 .hero-content h1 {
-	font-size: 5rem;
+	font-size: 4rem;
 	font-weight: 900;
 	letter-spacing: -5px;
 	line-height: 4.5rem;
@@ -365,7 +365,7 @@ header .logo a{
 		width: 50%;
 		margin: 0 auto;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 		background: ;
 	}
