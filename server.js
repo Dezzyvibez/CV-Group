@@ -1,4 +1,3 @@
-```js
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -52,4 +51,3 @@ app.get('/contact', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Chopvibe Server running on port ${PORT}`);
 });
-```
