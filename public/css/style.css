@@ -94,7 +94,6 @@ header .logo a{
     position: relative;
     text-decoration: none;
     padding-bottom: 5px;
-    display: inline-block;
 	border-radius: 50px;
 }
 
@@ -111,7 +110,7 @@ header .logo a{
     bottom: 0;
 	align-items: center;
     left: 0;
-    background-color: #fcdc00; /* Line color */
+    background-color: var(--hunter); /* Line color */
     
     /* 1. Initial State: Invisible */
     transform: scaleX(0);
@@ -134,7 +133,7 @@ header .logo a{
 
 
 .nav-links ul li a:hover{
-	background: #211D14.;
+	background: var(--hunter).;
 	border-radius:;
 	transition: .5s ease-in;
 }
@@ -1133,19 +1132,12 @@ footer {
         width: 80%;
         max-width: 350px;
         height: 100vh;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: block;
         align-items: center;
-
         gap: 25px;
-
         background: rgba(0, 0, 0, 0.97);
         backdrop-filter: blur(12px);
-
         transition: right 0.35s ease;
-
         z-index: 1000;
     }
 
