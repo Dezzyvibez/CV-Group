@@ -47,7 +47,7 @@ header.scrolled {
 }
 
 header .logo {
-    font-weight: 900;
+    font-weight: 600;
     font-size: 1.8rem;
     letter-spacing: -1px;
 	font-family: ;
@@ -129,81 +129,6 @@ nav ul li a:hover::after {
     transform-origin: bottom right;
 }
 
-nav ul li.dropdown {
-    position: relative;
-}
-
-nav ul li.dropdown {
-    position: relative;
-    height: 100%; /* Ensures the li covers the header height */
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-menu {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #211D14;
-    min-width: 250px;
-    list-style: none;
-	border-radius: 10px;
-    padding: 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    z-index: 1000;
-	overflow: hidden;
-}
-
-/* This is the only way it reveals */
-.dropdown-menu.show-menu {
-    display: block;
-}
-
-/* Optional: Rotate arrow when open */
-.dropdown.open .arrow {
-    transform: rotate(180deg);
-}
-
-
-/* Style individual dropdown links */
-.dropdown-menu li{
-	padding: 0;
-}
-.dropdown-menu li a {
-    display: block;
-    padding: 15px 25px;
-    color: rgba(255, 255, 255, 0.5) !important; /* Forces white text */
-    text-decoration: none;
-    font-size: 14px;
-    background-color: transparent; /* No background by default */
-    transition: background 0.2s ease;
-	border-radius: 0;
-	margin: 0;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #444444 !important; /* LIGHTER GRAY ON HOVER */
-    color: #ffffff !important;
-}
-
-/* This class is what JavaScript will toggle */
-.dropdown-menu.active {
-    display: block;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #333; /* Dark grey highlight on hover */
-	border-radius: 0;	
-}
-
-/* Style the dropdown arrow */
-.arrow {
-    font-size: 10px;
-    margin-left: 5px;
-    display: inline-block;
-    transition: transform 0.3s;
-}
 
 
 nav ul li a:hover{
@@ -1263,12 +1188,14 @@ footer {
     .hero-content .tagline {
         font-size: 13px;
         letter-spacing: 2px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+		padding: 0;
     }
 
     .hero-content h1 {
         font-size: clamp(38px, 11vw, 58px);
         line-height: 1.05;
+		letter-spacing: 3px;
         margin: 0 0 20px;
     }
 
@@ -1276,6 +1203,8 @@ footer {
         font-size: 14px;
         line-height: 1.7;
         max-width: 500px;
+		padding-top: 10px;
+		padding-bottom: 10px;
         margin: 0 auto 25px;
     }
 
