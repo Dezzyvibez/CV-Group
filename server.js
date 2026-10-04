@@ -27,26 +27,28 @@ app.set('view engine', 'ejs');
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
-app.get('/', (req, res) => {
-    res.render('index', { page_name: 'index' });
+
+
+app.get('/', async (req, res) => {
+  try {
+    res.render('index', { 
+      page_name: 'index',
+      headerClass: '',
+      
+      user: req.session?.user || null 
+    });
+  } catch (err) {
+    console.error('🔥 Error rendering homepage template:', err.message);
+    // Fallback redirect to discover if the homepage view file errors out
+    res.redirect('/discover');
+  }
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', { page_name: 'about' });
-});
 
-app.get('/artist', (req, res) => {
-    res.render('artist', { page_name: 'artist' });
-});
-
-app.get('/service', (req, res) => {
-    res.render('service', { page_name: 'service' });
-});
-
-app.get('/contact', (req, res) => {
-    res.render('contact', { page_name: 'contact' });
-});
+app.get('/about',           (req, res) => res.render('about',           { page_name: 'about' }));
+app.get('/contact',         (req, res) => res.render('contact',         { page_name: 'contact' }));
+app.get('/artist',             (req, res) => res.render('artist',             { page_name: 'artist' }));
+app.get('/service',         (req, res) => res.render('service',         { page_name: 'service' }));
 
 app.listen(PORT, () => {
     console.log(`Chopvibe Server running on port ${PORT}`);
