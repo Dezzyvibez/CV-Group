@@ -1,0 +1,222 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #000; /* Black Background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+	padding: 0 3%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.contact-header h1 {
+    font-size: 3.2rem;
+    letter-spacing: -1px;
+    margin-bottom: ;
+	color: ;
+	background: -webkit-linear-gradient( 45deg, #D4B96D, #D69A00);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+	color: #fff;
+}
+
+
+/* Contact Cards Grid */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+			margin-bottom: 10rem;
+        }
+
+        .contact-card {
+            background:;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            flex: 1;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #ff4d4d.; /* Brand accent color */
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+			padding:;
+            font-size: 30px;
+			width: 70px;
+			padding: 10px;
+            margin-bottom: 5px;
+            display: inline-block;
+			background: #1c1c1c;
+			border-radius: 50%;
+	background: -webkit-linear-gradient( 45deg, #D4B96D, #D69A00);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+        }
+
+        .contact-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #888;
+            text-transform: ;
+            letter-spacing: -.5px;
+        }
+
+        .contact-card p, .contact-card a {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #fff;
+			letter-spacing: .8px;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color:;
+        }
+		
+		
+/* Flexbox Wrapper */
+.contact-wrapper {
+	width: 100%;
+	background:;
+    display: flex;
+	justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Form Styling */
+.form-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+	width: 50%;
+}
+
+.form-section h2 {
+    margin-bottom: 25px;
+    font-size: 2.3rem;
+	color: #D4B96D;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 20px 15px;
+    background: #ddd;
+    border: none;
+	outline: none;
+    border-radius: 8px;
+    color: #111;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff4d4d;
+}
+
+.submit-btn {
+	background: linear-gradient(to right, #D4B96D 0%, #D69A00 100%);
+    color: white;
+	width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+	font-size: 1.5rem;
+}
+
+.submit-btn:hover {
+    background: #d4b95d;
+}
+
+/* Address Styling */
+.address-section {
+	width: 50%;
+    flex: 1;
+    display: flex;
+	background:;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+    background: #1c1c1c;
+    padding: 8px 15px;
+    border-radius: 50%;
+}
+
+.info-item h3 {
+    font-size: 1.7rem;
+	line-height: 30px;
+	font-weight: 700;
+    margin-bottom:0;
+    color: #D4B96D;
+}
+
+.info-item p, 
+.info-item a {
+    color: #888;
+    text-decoration: none;
+    font-size: 1rem;
+	font-weight: bolder;
+}
+
+.info-item a:hover {
+    color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .form-section, .address-section {
+        width: 100%;
+    }
+}
