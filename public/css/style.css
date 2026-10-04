@@ -66,12 +66,12 @@ header .logo a{
 	height: 100%;
 }
 .nav-links ul {
-    display: flex !important;
+    display: flex ;
 	place-items: center;
     list-style: none;
     align-items: center; /* Vertically centers the text */
-	justify-content: center !important;
-	align-content: center !important;
+	justify-content: center;
+	align-content: center;
 	gap:;
 }
 
