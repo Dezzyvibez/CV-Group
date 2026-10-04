@@ -1080,11 +1080,12 @@ footer {
     .header,
     nav {
         width: 100%;
-    }
-
-    nav {
         position: relative;
     }
+.nav-links ul {
+    display: block !important;
+	place-items: center;
+}
 
     /* Hamburger button */
     .hamburger {
