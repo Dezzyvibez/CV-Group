@@ -1,24 +1,14 @@
 {
+  "name": "cv-group",
+  "version": "1.0.0",
+  "description": "CV Group dynamic website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "ejs": "^4.0.1",
     "express": "^5.2.1",
     "mongoose": "^9.2.1"
   }
-  
-  {
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ]
-}
-
 }
