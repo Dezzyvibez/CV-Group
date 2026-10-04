@@ -1082,10 +1082,7 @@ footer {
         width: 100%;
         position: relative;
     }
-.nav-links ul {
-    display: block !important;
-	place-items: center;
-}
+
 
     /* Hamburger button */
     .hamburger {
@@ -1129,11 +1126,10 @@ footer {
 		display: block;
         position: fixed;
         top: 0;
-        right: -100%;
+        left: -100%;
         width: 80%;
         max-width: 350px;
         height: 100vh;
-        display: block;
         align-items: center;
         gap: 25px;
         background: rgba(0, 0, 0, 0.97);
@@ -1141,7 +1137,15 @@ footer {
         transition: right 0.35s ease;
         z-index: 1000;
     }
+	
 
+	.nav-links ul {
+	    display: flex !important;
+		place-items: center;
+		justify-content: center;
+		align-content: center;
+	}
+	
     .nav-links.active {
         right: 0;
     }
