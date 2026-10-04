@@ -1120,13 +1120,444 @@ footer {
     font-size: 0.92rem;
 }
 
-/* Responsive for Mobile */
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
 @media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
+
+    /* ---------- GLOBAL ---------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION / HAMBURGER
+       ===================================================== */
+
+    header,
+    .header,
+    nav {
+        width: 100%;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        padding: 8px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile menu */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 350px;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+
+        background: rgba(0, 0, 0, 0.97);
+        backdrop-filter: blur(12px);
+
+        transition: right 0.35s ease;
+
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero-slider {
+        min-height: 100vh;
+        height: auto;
+        position: relative;
+    }
+
+    .slide {
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 25px;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
         text-align: center;
     }
-    .newsletter-form {
-        justify-content: center;
+
+    .hero-content .tagline {
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
     }
+
+    .hero-content h1 {
+        font-size: clamp(38px, 11vw, 58px);
+        line-height: 1.05;
+        margin: 0 0 20px;
+    }
+
+    .hero-content > p:not(.tagline) {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 500px;
+        margin: 0 auto 25px;
+    }
+
+    .hero-content br {
+        display: none;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .button-container form {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .button-container .btn,
+    .button-container .btn-s {
+        width: 100%;
+        min-height: 48px;
+    }
+
+
+    /* =====================================================
+       SEARCH OVERLAY
+       ===================================================== */
+
+    .search-overlay {
+        padding: 20px;
+    }
+
+    .search-container {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .search-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-container input,
+    .search-container button {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .close-search {
+        top: 20px;
+        right: 25px;
+        font-size: 35px;
+    }
+
+
+    /* =====================================================
+       SERVICES MARQUEE
+       ===================================================== */
+
+    .services-marquee {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .marquee-track {
+        width: max-content;
+        display: flex;
+        align-items: center;
+    }
+
+    .service {
+        flex-shrink: 0;
+        padding: 0 18px;
+    }
+
+    .service h3 {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       GENERAL CONTAINERS
+       ===================================================== */
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+
+    /* =====================================================
+       ABOUT SECTION
+       ===================================================== */
+
+    section.about .container,
+    .about .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cardimg.about,
+    .cardtext.about {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cardimg.about img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .cardtext.about {
+        padding: 0;
+    }
+
+    .cardtext.about h2 {
+        font-size: clamp(30px, 8vw, 44px);
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    .cardtext.about p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       FEST SECTION
+       ===================================================== */
+
+    .fest .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cardtext.fest,
+    .cardimg.fest {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cardtext.fest {
+        padding: 0;
+        order: 1;
+    }
+
+    .cardimg.fest {
+        order: 2;
+    }
+
+    .cardimg.fest img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .cardtext.fest h2 {
+        font-size: clamp(32px, 9vw, 48px);
+        line-height: 1.1;
+    }
+
+    .cardtext.fest h3 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .cardtext.fest p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .cardtext.fest ol {
+        padding-left: 20px;
+    }
+
+    .cardtext.fest ol li {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .cardtext.fest .btn {
+        width: 100%;
+        max-width: 250px;
+        min-height: 48px;
+    }
+
+
+    /* =====================================================
+       ARTISTS
+       ===================================================== */
+
+    .section-artist {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-artist .center-text {
+        font-size: 34px;
+        margin-bottom: 25px;
+    }
+
+    .artist-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+       ===================================================== */
+
+    .gallery {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .gallery .center-text {
+        font-size: 34px;
+        margin-bottom: 25px;
+    }
+
+    .gallery-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+
+    /* =====================================================
+       SMALL MOBILE DEVICES
+       ===================================================== */
+
+    @media (max-width: 480px) {
+
+        .hero-content {
+            padding: 0 18px;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+        }
+
+        .hero-content > p:not(.tagline) {
+            font-size: 13px;
+        }
+
+        .container {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .artist-grid,
+        .gallery-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .service {
+            padding: 0 12px;
+        }
+
+        .service h3 {
+            font-size: 12px;
+        }
+    }
+
 }
