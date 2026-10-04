@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Chopvibe</title>
+    <title>
+        <% if (typeof page_name !== 'undefined') { %>
+            <% if (page_name === 'event-detail' && typeof event !== 'undefined') { %>
+                <%= event.eventName || event.eventname %>
+            <% } else if (page_name === 'about') { %>
+                About
+            <% } else { %>
+                <%= page_name.charAt(0).toUpperCase() + page_name.slice(1).toLowerCase() %>
+            <% } %>
+        <% } else { %>
+            Welcome
+        <% } %> | Rixxa Ng
+	</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/contact.css">
 	<link rel="icon" href="img/cv-icon.png" type="image/x-icon"/>
