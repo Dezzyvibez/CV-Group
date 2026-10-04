@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Chopvibe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/contact.css">
+	<link rel="icon" href="img/CVLogo-32x32.png" type="image/x-icon"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://googleapis.com" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/e0dbcae42d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><span>Chop</span>vibe</div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/artist">Artists</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+			<div class="header-tools">
+				<a href="javascript:void(0)" id="searchOpen" class="search-trigger"><i class="fa fa-search" aria-hidden="true"></i></a>
+			</div>	
+
+    </header>
+
+
+    <!-- Hero section background images are handled in CSS animation -->
+    <section id="home" class="hero-slider">
+		<!-- The Background Layers (Each image gets its own div) -->
+		  <div class="slide" style="background-image: url('img/kilogram.png');"><span class="artist-name">Kilogram</span></div>
+		  <div class="slide" style="background-image: url('img/jenny.png');"><span class="artist-name">Jenny</span></div>
+		  <div class="slide" style="background-image: url('img/Polar.png');"><span class="artist-name">Polar</span></div>
+		  <div class="slide" style="background-image: url('img/Bella.png');"><span class="artist-name">Bella</span></div>
+
+        <div class="hero-content">
+					<p class="tagline"> Record Label Reimagined.. </p>
+            <h1>Produce. Distribute. <br/>Dominate.</h1>
+				<p> We scout the streets of Akure and beyond for the next sound of Africa. <br/>From the studio booth to the Chopvibe Fest stage—we turn raw energy into a global legacy.</p>
+            <div class="button-container">
+					<form method="post" action="/artist"><input type="submit" class="btn" value="Join Roster"></form>
+					<form action="/service"><input type="submit" class="btn-s" value="Our Services"></form>
+			</div>
+        </div>
+    </section>
+	
+	
+<!-- Full-Screen Search Overlay -->
+<div id="searchOverlay" class="search-overlay">
+    <span class="close-search" id="searchClose">&times;</span>
+    <div class="search-container">
+        <form action="" method="get">
+            <input type="text" placeholder="Search for artists, services..." name="q" autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<section class="services-marquee">
+    <div class="marquee-track" id="">
+        <!-- FIRST SET -->
+        <div class="service"><h3>Music Production</h3><p>•</p></div>
+        <div class="service"><h3>Digital Agency</h3><p>•</p></div>
+        <div class="service"><h3>Visuals</h3><p>•</p></div>
+        <div class="service"><h3>Rixxa Tickets</h3><p>•</p></div>
+        <div class="service"><h3>Music Distribution</h3><p>•</p></div>
+        <div class="service"><h3>Music Publishing</h3><p>•</p></div>
+        <div class="service"><h3>live Entertainment</h3><p>•</p></div>
+        <div class="service"><h3>Creative Studios</h3><p>•</p></div>
+
+        <!-- SECOND SET -->
+        <div class="service" aria-hidden="true"><h3>Music Production</h3><p>•</p></div>
+        <div class="service" aria-hidden="true"><h3>Digital Agency</h3><p>•</p></div>
+        <div class="service" aria-hidden="true"><h3>Visuals</h3><p>•</p></div>
+        <div class="service" aria-hidden="true"><h3>Rixxa Tickets</h3><p>•</p></div>
+        <div class="service"><h3>Music Distribution</h3><p>•</p></div>
+        <div class="service"><h3>Music Publishing</h3><p>•</p></div>
+        <div class="service"><h3>live Entertainment</h3><p>•</p></div>
+        <div class="service"><h3>Creative Studios</h3><p>•</p></div>
+    </div>
+</section>
+
+
+
+
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="cardimg about">
+                <img src="img/kilogram.png" alt="Chopvibe Studio">
+            </div>
+            <div class="cardtext about">
+                <h2>Feel the Vibe. Savor The Sound.</h2>
+                <p>CV Group is a creative powerhouse based in Akure, Nigeria, sitting at the intersection of technology and entertainment. Founded on the principle of "Chopvibe" we integrate world-class software engineering with cutting-edge music production to fuel the next generation of African creators and businesses.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="fest">
+        
+        <div class="container">	
+            <div class="cardtext fest">
+			<h2 class="center-text">ChopVibe Fest</h2>
+                <h3>The Pulse of the Street. The Soul of the Stage.</h3>
+                <p>Chopvibe Fest was born from a single mission: to take the unfiltered talent of the 
+				underground and amplify it with world-class production. It is more than an outdoor festival; 
+				it is the official birth of the Chopvibe Record Label and a sanctuary for those who live for 
+				the rhythm of the city.</p>
+				
+				<ol><li><i class="fa-solid fa-calendar"></i> December 2026</li>
+					<li> <i class="fa-solid fa-location-dot"></i>Nationwide</li>
+					<li> <i class="fa-solid fa-ticket"></i> Starting From #3000</li>
+				</ol>
+                <button class="btn">Get Tickets</button>
+            </div>
+			
+            <div class="cardimg fest">
+                <!-- Direct image link fixed -->
+                <img src="img/ajebo.png" alt="Upcoming Event">
+            </div>
+        </div>
+    </section>
+
+    <section id="artists" class="section-artist">
+        <h2 class="center-text">The Roster</h2>
+        <div class="artist-grid" id="artistGrid"></div>
+    </section>
+	
+    <section id="services" class="gallery">
+        <h2 class="center-text">Gallery</h2>
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+
+
+
+<%- include('partials/footer') %>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column brand-info">
+                <h2 class="logo">CHOPVIBE MUSIC</h2>
+                <p>CV Group is a creative powerhouse based in Akure, Nigeria, sitting at the intersection 
+					of technology and entertainment. Founded on the principle of "Chopvibe" we integrate world-class 
+					software engineering with cutting-edge
+					music production to fuel the next generation of African creators and businesses.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#distro">Distro</a></li>
+                    <li><a href="#studios">Studios</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+			
+			
+			
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p><a href="#">info@chopvibemusic.com</a></p>
+                <div class="socials">
+                    <a href="www.instagram.com/@chopvibemusic"><i class="fab fa-instagram"></i></a> <a href="www.x.com/@chopvibemusic"><i class="fa-brands fa-x-twitter"></i></a> <a href="www.tiktok.com/@chopvibemusic"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+			
+			
+
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Stay in the loop with new releases & events.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit" class="btn-small">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ChopVibe Group.  Engineered for the Streets.</p> <p> Privacy Policy | Terms & Conditions</p>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
