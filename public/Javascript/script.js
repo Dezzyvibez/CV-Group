@@ -156,4 +156,28 @@ window.addEventListener('scroll', function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    if (!hamburger || !navLinks) return;
+
+    hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+
+    // Close menu when a navigation link is clicked
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
+        });
+    });
+
+});
+
+
+
 
