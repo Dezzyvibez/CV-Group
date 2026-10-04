@@ -83,7 +83,7 @@ header .logo a{
 .nav-links ul li a {
     color: #fff;
     margin-left: 0;
-    font-size: 0.99rem;
+    font-size: 0.85rem;
 	font-weight: 500;
 	font-family:;
 	letter-spacing: 1px;
@@ -97,7 +97,7 @@ header .logo a{
 	border-radius: 50px;
 }
 .nav-links ul li a.active{
-	color: var(--hunter);
+	color: var(--hunter) !important;
 }
 
 .nav-links ul li a.scrolled {
@@ -244,7 +244,7 @@ header .logo a{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* BLACK OVERLAY - adjust 0.5 for darkness */
+  background: rgba(0, 0, 0, 0.5); /* BLACK OVERLAY - adjust 0.5 for darkness */
   z-index: 2; /* Sits above images, below text */
 }
 
